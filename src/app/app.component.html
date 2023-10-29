@@ -2,14 +2,35 @@
 <div class="max-w-2xl container mx-auto pt-5" >
 
   <h1 class="font-bold mb-2 text-center text-lg ">{{title | titlecase}}</h1>
+  <input 
+  type="text" 
+  class="mb-2 border-2 py-2 px-4 w-full rounded-lg border-green-300 focus:outline-none focus:border-blue-500" 
+  placeholder="Filter product..."
+  [(ngModel)]="filtered"
+   (ngModelChange)="onFilteredChange($event)"
+  >
 
   <p class="text-center text-lg" *ngIf="loading">Loading...</p>
 
+<div *ngIf="products$ | async as products">
   <app-product 
+  *ngFor="let product of products | filteredProduct:filtered; let i = index" 
+  [product]="product">
+  
+  </app-product>
+</div>
+
+ <app-modal title="Create Product">
+  <app-create-product></app-create-product>
+ </app-modal>
+
+
+
+  <!-- <app-product 
   *ngFor="let product of products$ | async; let i = index"
    [product]="product">
 
-  </app-product>
+  </app-product> -->
 
 <!--  <app-product [product]="products[0]"></app-product>-->
 <!--  <app-product [product]="products[1]"></app-product>-->

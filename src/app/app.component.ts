@@ -20,7 +20,10 @@ export class AppComponent implements OnInit {
   // products: IProduct[] = data;
   // products: IProduct[] = [];
   products$: Observable<IProduct[]>;
-  loading = false
+  loading = false;
+  filtered = ''
+
+
 
 
   ngOnInit(): void {
@@ -34,5 +37,9 @@ export class AppComponent implements OnInit {
     //   console.log("🚀  product:", product);
     // })
 
+  }
+
+  onFilteredChange(value: string) {
+    console.log('filtered:', value);
   }
 };
