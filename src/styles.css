@@ -1,9 +1,9 @@
+@charset "UTF-8";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .active_link {
   /* Ваши стили для активной ссылки */
   font-weight: bold; /* Пример стиля: жирный текст */
   color: rgb(221, 161, 82); /* Пример стиля: красный цвет текста */
-}
+}/*# sourceMappingURL=styles.css.map */

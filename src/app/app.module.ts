@@ -12,6 +12,9 @@ import { ModalComponent } from './components/modal/modal.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FocusDirective } from './derectives/focus.directive';
+import { ProductsPageComponent } from './pages/products-page/products-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FocusDirective } from './derectives/focus.directive';
     FilterProductPipe,
     ModalComponent,
     CreateProductComponent,
-    FocusDirective
+    FocusDirective,
+    ProductsPageComponent,
+    AboutPageComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
