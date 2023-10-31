@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,11 @@ import { FocusDirective } from './derectives/focus.directive';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { HomesPageComponent } from './pages/homes-page/homes-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponentComponent } from './components/home-component/home-component.component';
+import { HousingLocationComponent } from './components/housing-location/housing-location.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +33,10 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     FocusDirective,
     ProductsPageComponent,
     AboutPageComponent,
-    NavigationComponent
+    NavigationComponent,
+    HomesPageComponent,
+    HomeComponentComponent,
+    HousingLocationComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,9 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     NgOptimizedImage,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
