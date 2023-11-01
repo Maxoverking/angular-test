@@ -1,1 +1,8 @@
-<p>housing-location works!</p>
+<section class=" border px-4 py-4 border-orange-500 rounded-xl bg-slate-300">
+            <img class="w-[300px] h-[200px] rounded-lg overflow-hidden mb-2" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
+            <h2 class="text-orange-800 text-lg">{{ housingLocation.name }}</h2>
+            
+            
+            <p class="flex"><mat-icon class=" text-red-800 ">location_on</mat-icon> {{ housingLocation.city}},
+                {{housingLocation.state }}</p>
+</section>

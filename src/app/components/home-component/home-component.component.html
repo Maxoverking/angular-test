@@ -5,6 +5,9 @@
     class="border rounded-sm px-4 py-2 mr-4">
     <button class="mf-4 bg-orange-900 text-white rounded-md px-4 py-2 mr-4" type="button">Search</button>
 </form>
-<section>
-    <app-housing-location></app-housing-location>
+<section class="grid grid-cols-2 gap-4 mb-8">
+    <app-housing-location 
+    *ngFor="let housingLocation of housingLocationData "
+    [housingLocation]="housingLocation"
+    ></app-housing-location>
 </section>
